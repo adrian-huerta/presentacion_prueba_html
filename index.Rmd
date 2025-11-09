@@ -1,0 +1,52 @@
+---
+title: "Análisis del _Movimiento Browniano_ usando RStudio"
+author: "Adrián Huerta"
+date: "`r Sys.Date()`"
+output: ioslides_presentation
+---
+
+```{r setup, include=FALSE}
+library(vembedr)
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## Ejemplos de movimiento browniano
+
+```{r}
+embed_youtube("ken9BIJHwmk?si=_Fyf7vcccZPtY37Q")
+```
+
+## Contenido
+
+- Series de tiempo
+- Histogramas
+- Trayectorias e histogramas
+
+## Lectura de datos con tabuladores
+
+```{r, echo = TRUE}
+#lectura de datos con tabuladores
+xy <- read.table("C:/Users/arctu/Documents/RStudio/XY.txt")
+```
+
+## Muestra las primeras 5 lineas
+```{r, echo = TRUE}
+#5 primeras lineas
+head(xy,5)
+
+#vector x,y
+x<-xy$V2
+y<-xy$V3
+```
+
+## Histogramas
+
+```{r, echo=TRUE}
+hist(x)
+hist(y)
+
+plot(x,type="line")
+hist(y)
+plot(y,type="line")
+```
+
